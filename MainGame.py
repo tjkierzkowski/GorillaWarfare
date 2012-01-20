@@ -9,6 +9,11 @@ class MainGame(ShowBase):
 	def __init__(self):
 		ShowBase.__init__(self)
 		
+		#Disable standard mouse camera movement
+		#base.disableMouse()
+		#Exit app on escape key
+		base.accept("escape", sys.exit)
+		
 		#Get the location of MainGame.py
 		projectdir = os.path.abspath(sys.path[0])
 		#convert it to Panda's unix-style notation.
@@ -31,8 +36,9 @@ class MainGame(ShowBase):
 		#TODO add camera controls to a function that can be added to the taskMgr
 		#Handle camera controls here
 		controls = BasicControls()
-		controls.startMovement()
+		#controls.startMovement()
 		self.taskMgr.add(controls.movement, 'movement')
+		self.taskMgr.add(controls.walk, 'walk')
 		
 	
 app = MainGame()

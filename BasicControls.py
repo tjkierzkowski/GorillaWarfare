@@ -29,20 +29,23 @@ class BasicControls(ShowBase):
             self.P += self.mouseChangeY * self.sensitivity
             base.camera.setHpr(self.H , self.P, 0)
            
-        self.accept("w", self.walk)
+        #self.accept("w", self.walk)
         return Task.cont
 
     def startMovement(self):
         base.win.movePointer(0, self.centerX, self.centerY)
         taskMgr.add(self.movement, 'movement')
+        taskMgr.add(self.walk, 'walk')
 
     def stopMovement(self):
         taskMgr.remove('movement')
+        taskMgr.remove('walk')
        
-    def walk(self):
+    def walk(self, task):
         dir = base.camera.getNetTransform().getMat().getRow3(1)
         dir.setZ(0)
         dir.normalize()
         self.pos += dir * self.speed
         base.camera.setPos(self.pos)
+        return Task.cont
        
