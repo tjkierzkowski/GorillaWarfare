@@ -1,0 +1,23 @@
+/*******************************************************
+*		TODO List
+*		Project: Gorilla Warfare
+*		Author: Tom Kierzkowski (tjkierzkowski@gmail.com)		
+*
+********************************************************/
+
+Start Date:	01-19-2012
+
+Code:
+- make a main.py file that uses code and models from the tutorial on Panda3d's site
+- implement controls using the mouse and keypad for movement
+	- first person like
+	- offer 3rd person follow behind
+- allow camera movement to implemented
+- try to implement basic collision detection
+
+Art:
+- make or get a model for
+	- gorilla
+	- pongo orangatuan
+	- jungle-like level
+- export the model in a EGG format using Chicken or YABEE
