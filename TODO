@@ -11,6 +11,8 @@ Code:
 - make a main.py file that uses code and models from the tutorial on Panda3d's site
 - implement controls using the mouse and keypad for movement
 	- first person like
+		- Fix the walk procedure in BasicControls.py
+		- Figure out why it isn't advancing forward
 	- offer 3rd person follow behind
 - allow camera movement to implemented
 - try to implement basic collision detection
